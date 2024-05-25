@@ -1,8 +1,8 @@
 #pragma once
 
 #include "debug.h"
-#include "quickjs/quickjs-libc.h"
-#include "quickjs/cutils.h"
+#include "deps/quickjs/quickjs-libc.h"
+#include "deps/quickjs/cutils.h"
 #include <stdbool.h>
 
 #ifdef __cplusplus
@@ -154,7 +154,7 @@ extern "C" {
     var ;                                                   \
     {                                                       \
         const char * cstr = JS_ToCString(ctx, argv[i]) ;    \
-        var = be::FS::toVFSPath(ctx, cstr) ;                \
+        var = be::FS::toVFSPath(cstr) ;                     \
         JS_FreeCString(ctx, cstr) ;                         \
     }
 
@@ -383,7 +383,7 @@ bool qjs_instanceof(JSContext *ctx, JSValue obj, JSClassID clz_id) ;
                 JSValue item = JS_GetPropertyUint32(ctx, jsobj, i) ; \
                 code                        \
                 JS_FreeValue(ctx,item) ;    \
-            }                               \ 
+            }                               \
             JS_FreeValue(ctx,jslen) ;       \
         }                                   \
     }

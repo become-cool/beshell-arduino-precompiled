@@ -1,12 +1,11 @@
 #pragma once
 
 #include "InDevPointer.hpp"
-#include "driver/DriverModule.hpp"
 #include "module/serial/I2C.hpp"
 
-namespace be::driver {
+namespace be::driver::input {
 
-    class GT911: public be::driver::InDevPointer {
+    class GT911: public InDevPointer {
         DECLARE_NCLASS_META
     private:
         static std::vector<JSCFunctionListEntry> methods ;
