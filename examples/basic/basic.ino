@@ -7,7 +7,7 @@
  * 
  * 编译上传后：
  * 
- * 在 `串口监视器` 中，选择 115200 波特率。
+ * 打开 `工具` -> `串口监视器` 中，选择 115200 波特率。
  * 
  * 输入 `help` 指令查看 BeShell 指令列表。
  * 
@@ -22,9 +22,11 @@ using namespace be ;
 BeShell beshell ;
 
 void setup() {  
+  // 启动 BeShell
   beshell.setup() ;
 }
 
+// 主循环
 void loop() {
   beshell.loop() ;
 }

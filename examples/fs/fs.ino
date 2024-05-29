@@ -9,7 +9,7 @@
  * 
  * 编译上传后：
  * 
- * 在 `串口监视器` 中，选择 115200 波特率。
+ * 打开 `工具` -> `串口监视器` 中，选择 115200 波特率。
  * 
  * 1. 输入 `touch main.js` 新建一个文件 main.js
  * 
@@ -49,6 +49,7 @@ void setup() {
   beshell.engine->evalScript("/main.js") ;
 }
 
+// 主循环
 void loop() {
   beshell.loop() ;
 }
