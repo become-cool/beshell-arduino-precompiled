@@ -3,7 +3,7 @@ import * as wifi from "wifi"
 async function main(){
     
     // 连接到 wifi 热点
-    if( ! await wifi.connect("alee's home", "43215678") ){
+    if( ! await wifi.connect("your SSID", "your PASSWORD") ){
         console.log("Failed to connect to AP")
         return
     }
