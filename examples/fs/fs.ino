@@ -30,17 +30,15 @@
 
 #include <BeShell.hpp>
 
-using namespace be ;
-
-BeShell beshell ;
+be::BeShell beshell ;
 
 void setup() {  
   
   // 应用 FS 模块
-  beshell.use<FS>() ;
+  beshell.use<be::FS>() ;
 
   // 将 flash 上的名为 ffat 的分区挂载到 / 目录
-  FS::mount("/", new FatFS("ffat",true)) ;
+  be::FS::mount("/", new be::FatFS("ffat",true)) ;
 
   // 启动 BeShell
   beshell.setup() ;

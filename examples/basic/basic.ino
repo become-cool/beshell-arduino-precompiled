@@ -17,9 +17,7 @@
 
 #include <BeShell.hpp>
 
-using namespace be ;
-
-BeShell beshell ;
+be::BeShell beshell ;
 
 void setup() {  
   // 启动 BeShell
